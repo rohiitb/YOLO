@@ -1,52 +1,52 @@
 # You Only Look Once (YOLO): Pytorch Lightning Implementation
 
-The project involved the implementation of the object detection algorithm Yolo defined in the paper: [YOLO](https://arxiv.org/pdf/1506.02640.pdf). YOLO poses the object detection problem as regression problem and uses a single neural network to predict bounding boxes and class probabilities directly from full images in one evaluation.
+This project involves the implementation of the object detection algorithm Yolo defined in the paper: [YOLO](https://arxiv.org/pdf/1506.02640.pdf). YOLO considers the object detection problem as regression problem and uses a single neural network to predict bounding boxes and class probabilities directly from full images in one evaluation.
 
 ## Network Architecture 
 <img src="./Result snaps/Yolo_architecture.JPG" align = "center">
 
 
 ## Network Architecture Table
-<img src="./Results/Network architecture.png" align = "center">
+<img src="./Result snaps/yolo_table.JPG" align = "center">
 
 
 ## Results
-<!--![](./Results/1.png)     ![](./Results/1_mask.png)
+<!-- ![](./Results/1.png)     ![](./Results/1_mask.png)
 ![](./Results/2.png)     ![](./Results/2_mask.png)
 ![](./Results/3.png)     ![](./Results/3_mask.png) -->
 
 
 <table>
   <tr>
-      <td align = "center"> <img src="./Results/1. Bounding box before elimination"> </td>
-      <td align = "center"> <img src="./Results/2. Bounding box after suppressing low confidence.png"> </td>
-      <td align = "center"> <img src="./Results/3. Bounding box after non-max suppression.png"> </td>
+      <td align = "center"> <img src="./Result snaps/Raw_image.JPG"> </td>
+      <td align = "center"> <img src="./Result snaps/Prediction_image.JPG"> </td>
+      <td align = "center"> <img src="./Result snaps/NMS_prediction.JPG"> </td>
   </tr>
   <tr>
-      <td align = "center"> Predictions from the network </td>
-      <td align = "center"> Suppressing low confidence boxes </td>
+      <td align = "center"> Raw labels from the dataset</td>
+      <td align = "center"> Predictions from the model </td>
       <td align = "center"> Boxes after non-max suppression </td>
   </tr>
 </table>
 
 <table>
   <tr>
-      <td align = "center"> <img src="./Results/6. Confidence error.png"> </td>
-      <td align = "center"> <img src="./Results/7. Localisation and classification error.png"> </td>
+      <td align = "center"> <img src="./Result snaps/Training_loss.JPG"> </td>
+      <td align = "center"> <img src="./Result snaps/Validation_loss.JPG"> </td>
   </tr>
   <tr>
-      <td align = "center"> Confidence error </td>
-      <td align = "center"> Localisation and Classification error </td>
+      <td align = "center"> Training Loss curve </td>
+      <td align = "center"> Validation Loss curve </td>
   </tr>
 </table>
 
 <table>
   <tr>
-      <td align = "center"> <img src="./Results/4. Precision recall curve.png"> </td>
-      <td align = "center"> <img src="./Results/5. MAP over training epochs.png"> </td>
+      <td align = "center"> <img src="./Result snaps/Training_loss.JPG"> </td>
+      <td align = "center"> <img src="./Result snaps/MAP_over_training.JPG"> </td>
   </tr>
   <tr>
-      <td align = "center"> Precision-Recall curves over the three classes</td>
+      <td align = "center"> Precision-Recall curves </td>
       <td align = "center"> Mean Average Precision over training epochs</td>
   </tr>
 </table>
